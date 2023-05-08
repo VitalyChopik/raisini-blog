@@ -33,3 +33,18 @@
 // Подключение стилей отдельных блоков и секций =======================================================================================================================
 @import 'layout/header';
 @import 'layout/footer';
+
+
+@import 'section/featured';
+@import 'section/featured-slider';
+@import 'section/substack';
+@import 'section/lifestyle';
+@import 'section/entertainment';
+@import 'section/music';
+@import 'section/spotlight';
+@import 'section/technology';
+@import 'section/startups';
+@import 'section/medium';
+@import 'section/bisiness';
+@import 'section/category';
+@import 'section/single';

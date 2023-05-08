@@ -1,0 +1,341 @@
+.icon {
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+
+  display: inline-flex;
+  align-self: center;
+  vertical-align: text-bottom;
+  flex-shrink: 0;
+
+  &:not([stroke-width]) {
+    stroke-width: 2;
+  }
+
+  &:not([height]) {
+    height: 1.5rem;
+  }
+  &:not([width]) {
+    width: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #wpadminbar {
+    position: fixed !important;
+  }
+}
+.shift\:bg-F1F8FF,
+.shift\:bg-white {
+  transition: 0.3s;
+}
+body.shifted {
+  .shift\:bg-white {
+    background-color: $white !important;
+  }
+  .shift\:bg-F1F8FF {
+    background-color: #f1f8ff !important;
+  }
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  transform: translateY(-1px);
+}
+
+#menu-header {
+  .menu-item {
+    text-transform: uppercase;
+    padding: 0 15px;
+    color: $black !important;
+
+    a {
+      text-decoration: none !important;
+      color: $black !important;
+      transition: 0.3s;
+
+      &:hover {
+        color: rgba($black, 0.75) !important;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  #menu-header\~wrapper {
+    position: fixed;
+    width: auto;
+    height: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: calc(100px + var(--#{$prefix}bar-height));
+    background: linear-gradient(107.28deg, #01ff85 -3.59%, #00fffa 102.85%), #94ffda;
+    transform: translateY(-1rem);
+    transition: 0.25s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  body.show\:menu-header\~wrapper {
+    #menu-header\~wrapper {
+      transform: translate(0);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+  }
+
+  #menu-header {
+    .menu-item {
+      padding: 0;
+
+      a {
+        display: block;
+        width: 100%;
+        @include padding(1rem 2rem);
+        @include font-size(1.125rem);
+        font-weight: 600;
+        box-shadow: 0 -2px 0 0 rgba($black, 0.1);
+
+        &:active,
+        &:focus {
+          background-color: rgba($white, 0.45);
+        }
+      }
+
+      &:last-child {
+        a {
+          box-shadow: 0 -2px 0 0 rgba($black, 0.1), 0 2px 0 0 rgba($black, 0.1);
+        }
+      }
+    }
+  }
+}
+
+#menu-header-toggle {
+  position: relative;
+
+  &::after,
+  &::before,
+  & {
+    padding: 0 !important;
+    width: 26px;
+    height: 2px;
+    border-radius: 4px;
+    background-color: $dark;
+    outline: 0 !important;
+    transition: 0.3s;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    transform: translateY(calc(-100% - 6px));
+    transform-origin: left;
+  }
+
+  &::after {
+    transform: translateY(calc(100% + 6px));
+  }
+}
+body.show\:menu-header\~wrapper {
+  #menu-header-toggle {
+    background: transparent;
+
+    &::before {
+      transform: translateY(calc(-100% - 6px)) rotate(40deg);
+    }
+    &::after {
+      transform: translateY(calc(100% + 6px)) rotate(-40deg);
+    }
+  }
+}
+[data-ohve] {
+  transition: 0.3s;
+}
+[data-ohvv] {
+  &:hover {
+    [data-ohve] {
+      opacity: 1 !important;
+    }
+  }
+}
+
+@keyframes pin {
+  to {
+    width: 65px;
+    height: 65px;
+    opacity: 0;
+  }
+}
+
+.pin {
+  width: 8px !important;
+  height: 8px !important;
+  @include media-breakpoint-up(md) {
+    width: 10px !important;
+    height: 10px !important;
+  }
+  @include media-breakpoint-up(xl) {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  background-color: $black !important;
+  border-radius: 100% !important;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  z-index: 20;
+
+  &::before {
+    display: none;
+    position: absolute !important;
+    content: "";
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
+    width: 16px !important;
+    height: 16px !important;
+    @include media-breakpoint-up(md) {
+      display: block;
+      width: 20px !important;
+      height: 20px !important;
+    }
+    @include media-breakpoint-up(xl) {
+      width: 32px !important;
+      height: 32px !important;
+    }
+    border: 2px solid $black !important;
+    background: transparent !important;
+    border-radius: 100% !important;
+  }
+
+  &::after {
+    position: absolute !important;
+    content: "";
+    left: 50% !important;
+    top: 50% !important;
+    border-radius: 100% !important;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    @include media-breakpoint-up(md) {
+      width: 20px;
+      height: 20px;
+    }
+    @include media-breakpoint-up(xl) {
+      width: 32px;
+      height: 32px;
+    }
+    border: 2px solid $black;
+    background: transparent;
+    pointer-events: none !important;
+
+    animation-name: pin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  &[data-type="2"] {
+    left: 40%;
+
+    &::after {
+      width: 8px;
+      height: 8px;
+      @include media-breakpoint-up(md) {
+        width: 10px;
+        height: 10px;
+      }
+      @include media-breakpoint-up(xl) {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  // &[data-type="3"] {
+  //   left: 45%;
+
+  //   &::before {
+  //     display: none !important;
+  //   }
+
+  //   &::after {
+  //     width: 8px;
+  //     height: 8px;
+  //     @include media-breakpoint-up(md) {
+  //       width: 10px;
+  //       height: 10px;
+  //     }
+  //     @include media-breakpoint-up(xl) {
+  //       width: 16px;
+  //       height: 16px;
+  //     }
+  //   }
+  // }
+
+  // &[data-type="4"] {
+  //   left: 50%;
+
+  //   &::after {
+  //     width: 8px;
+  //     height: 8px;
+  //     @include media-breakpoint-up(md) {
+  //       width: 10px !important;
+  //       height: 10px !important;
+  //     }
+  //     @include media-breakpoint-up(xl) {
+  //       width: 16px !important;
+  //       height: 16px !important;
+  //     }
+  //     border: 0;
+  //     background: $dark;
+  //   }
+  // }
+
+  // &[data-type="5"] {
+  //   left: 55%;
+
+  //   &::before {
+  //     display: none !important;
+  //   }
+
+  //   &::after {
+  //     width: 8px;
+  //     height: 8px;
+  //     @include media-breakpoint-up(md) {
+  //       width: 10px !important;
+  //       height: 10px !important;
+  //     }
+  //     @include media-breakpoint-up(xl) {
+  //       width: 16px !important;
+  //       height: 16px !important;
+  //     }
+  //     border: 0;
+  //     background: $dark;
+  //   }
+  // }
+}
+
+.video-pause-button {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+}
+.video-container:not(.invisible) {
+  &:hover {
+    .video-pause-button {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.featured-article {
+  margin-top: rem(40);
+  padding-bottom: rem(104);
+
+  @include media(992) {
+    margin-top: 0;
+    padding: rem(60) 0;
+  }
+
+  &__title {
+    margin-bottom: rem(40);
+
+    @include media(992) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: rem(493);
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  &__post {
+
+    border-radius: 10px;
+    overflow: hidden;
+  }
+}

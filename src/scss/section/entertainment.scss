@@ -1,0 +1,142 @@
+.entertainment {
+  margin-bottom: rem(104);
+
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: rem(24);
+    grid-row-gap: rem(24);
+    margin-bottom: rem(40);
+
+    @include media(992) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: rem(24);
+    }
+  }
+
+  &__box {
+    overflow: hidden;
+
+    @include media(992) {
+      display: flex;
+      align-items: center;
+      padding: rem(24);
+      gap: rem(24);
+    }
+
+    &.first {
+      @include media(992) {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+      }
+    }
+
+    &:nth-of-type(1) {
+      grid-area: 1 / 1 / 5 / 5;
+    }
+
+    &:nth-of-type(2) {
+      grid-area: 1 / 5 / 3 / 7;
+    }
+
+    &:nth-of-type(3) {
+      grid-area: 1 / 7 / 3 / 9;
+    }
+
+    &:nth-of-type(4) {
+      grid-area: 3 / 5 / 5 / 7;
+
+      @include media(992) {
+        display: none;
+      }
+    }
+
+    &:nth-of-type(5) {
+      grid-area: 3 / 7 / 5 / 9;
+
+      @include media(992) {
+        display: none;
+      }
+    }
+  }
+
+  &__box-image {
+    height: rem(165);
+
+    .first & {
+      height: 75%;
+
+      @include media(992) {
+        min-height: auto;
+        min-width: auto;
+        max-height: 100%;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        max-height: rem(335);
+        border-radius: 0;
+      }
+
+    }
+
+    @include media(992) {
+      min-height: rem(116);
+      min-width: rem(116);
+      max-height: rem(116);
+      max-width: rem(116);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+  }
+
+  &__box-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  &__box-text {
+    padding: rem(24);
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    justify-content: space-between;
+
+    @include media(992) {
+      padding: 0;
+    }
+
+    .first & {
+      padding: rem(24);
+    }
+  }
+
+  &__box-category {}
+
+  &__box-title {
+    @include media(992) {
+      margin-bottom: rem(24);
+    }
+  }
+
+  &__box-link {}
+
+  &__box-info {}
+
+  &__box-data {}
+
+  &__box-read {}
+
+  &__btn {
+    min-width: rem(180);
+    width: max-content;
+    height: rem(50);
+    gap: rem(8);
+    margin: 0 auto;
+  }
+}

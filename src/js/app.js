@@ -21,7 +21,7 @@ import {
 // import AOS from 'aos'
 
 /* Раскомментировать для использования */
-// import Swiper, { Navigation, Pagination } from 'swiper'
+import Swiper, { Navigation, Pagination } from 'swiper'
 
 // Включить/выключить FLS (Full Logging System) (в работе)
 window['FLS'] = location.hostname === 'localhost';
@@ -65,3 +65,67 @@ isWebp();
 /* Раскомментировать для использования */
 // togglePopupWindows()
 // =======================================================================================================
+
+const fearuredSliderClass = document.querySelector('.featured__slider');
+if (fearuredSliderClass) {
+  const featuredSlider = new Swiper(fearuredSliderClass, {
+    slidesPerView: 3,
+    modules: [Pagination, Navigation],
+    centeredSlides: true,
+    spaceBetween: -300,
+    grabCursor: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    loop: true,
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 0
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: -300,
+      }
+    }
+  });
+}
+
+const bisinessSliderClass = document.querySelector('.bisiness__block');
+if (bisinessSliderClass) {
+  const bisinessSlider = new Swiper(bisinessSliderClass, {
+    slidesPerView: 1.6,
+    modules: [Pagination, Navigation],
+    spaceBetween: 80,
+    centeredSlides: true,
+    grabCursor: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    // loop: true,
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+      },
+      992: {
+        slidesPerView: 1.6,
+        spaceBetween: 80,
+        loop: false,
+      }
+    }
+  });
+}

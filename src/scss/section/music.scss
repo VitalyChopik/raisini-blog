@@ -1,0 +1,94 @@
+.music {
+  margin-bottom: rem(80);
+
+  @include media(992) {
+    margin-bottom: rem(60);
+  }
+
+  &__block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(24);
+
+    // @include media(992) {
+    //   grid-template-columns: repeat(1, 1fr);
+    //   grid-template-rows: 3fr;
+    // }
+  }
+
+  &__box-text {
+    padding: rem(24);
+  }
+
+  &__block {
+    margin-bottom: rem(24);
+
+  }
+
+  &__box {
+    &.col {
+      width: calc(33.3333% - 16px);
+
+      @include media(992) {
+        width: 100%;
+      }
+    }
+
+    &.row {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      @include media(992) {
+        padding: rem(24);
+        gap: rem(24);
+      }
+    }
+  }
+
+  &__box-image {
+    width: 100%;
+
+    .col & {
+      height: rem(235);
+    }
+
+    .row & {
+      max-width: rem(175);
+      height: rem(175);
+      border-radius: rem(10);
+      overflow: hidden;
+
+      @include media(992) {
+        max-width: rem(116);
+        height: rem(116);
+      }
+    }
+
+  }
+
+  &__box-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  &__box-text {
+    .row & {
+      max-width: rem(500);
+
+      @include media(992) {
+        padding: 0;
+      }
+    }
+  }
+
+  &__box-title {
+    .row & {
+      @include media(992) {
+        margin-bottom: rem(24);
+      }
+    }
+  }
+}

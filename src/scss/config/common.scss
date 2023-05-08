@@ -1,1 +1,190 @@
 // Заголовки, общие БЄМ блоки и проче...
+.btn__link {
+  background: linear-gradient(180deg, #2A9AF2 0%, #1FE0DE 100%);
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+
+  svg {
+    path {
+      transition: all 0.5s;
+    }
+  }
+
+  &:hover {
+    color: #000;
+
+    svg {
+      path {
+        fill: #000;
+      }
+    }
+  }
+
+
+}
+
+
+.big-post {
+  &__wrapper {
+    position: relative;
+
+  }
+
+  &__content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    left: rem(24);
+    bottom: rem(24);
+    gap: rem(12);
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+    z-index: -1;
+  }
+
+  &__category {
+    font-size: 15px;
+    line-height: 17px;
+    color: #FFFFFF;
+  }
+
+  &__title {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 41px;
+    color: #FFFFFF;
+    max-width: rem(600);
+
+    @include media(992) {
+      font-size: rem(28);
+      line-height: rem(32);
+      margin-bottom: rem(24);
+    }
+
+    a {
+      color: inherit
+    }
+  }
+
+  &__info {
+    display: flex;
+  }
+
+  &__date,
+  &__read {
+    font-size: 14px;
+    line-height: 23px;
+    color: #FFFFFF;
+  }
+
+  &__date {
+    &::after {
+      content: " \2022";
+    }
+  }
+}
+
+.box {
+  &__post {
+    background: #F1F8FF;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  &__image {}
+
+  &__img {}
+
+  &__text {}
+
+  &__category {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    color: #6D6D6D;
+    margin-bottom: rem(4);
+    text-transform: uppercase;
+    display: flex;
+  }
+
+  &__title {
+    font-weight: 700;
+    color: #101010;
+    margin-bottom: rem(32);
+  }
+
+  &__link {
+    color: inherit;
+    font-size: inherit;
+  }
+
+  &__info {
+    span {
+      font-size: 13px;
+      line-height: 15px;
+      color: #6D6D6D;
+    }
+  }
+
+  &__data {
+    &::after {
+      content: " \2022 ";
+    }
+  }
+
+  &__read {}
+}
+
+.section {
+  &__title {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 52px;
+    text-transform: uppercase;
+    margin-bottom: rem(4);
+
+    @include media(992) {
+      font-size: rem(28);
+      line-height: rem(32);
+    }
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    line-height: 21px;
+    color: #595959;
+    margin-bottom: rem(40);
+
+    @include media(992) {
+      margin-bottom: rem(24);
+    }
+  }
+}
+
+.swiper-button-disabled {
+  background: #6D6D6D !important;
+}
+
+.back__btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #141414;
+  margin-bottom: rem(35);
+}
