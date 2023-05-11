@@ -73,7 +73,7 @@ if (fearuredSliderClass) {
     modules: [Pagination, Navigation],
     centeredSlides: true,
     spaceBetween: -300,
-    grabCursor: true,
+    autoHeight: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -104,7 +104,6 @@ if (bisinessSliderClass) {
     modules: [Pagination, Navigation],
     spaceBetween: 80,
     centeredSlides: true,
-    grabCursor: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,

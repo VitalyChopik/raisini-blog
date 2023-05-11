@@ -23,6 +23,7 @@
 
     img {
       width: auto;
+      max-height: rem(52);
 
       @include media(992) {
         max-height: rem(36);

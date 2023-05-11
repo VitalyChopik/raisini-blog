@@ -104,6 +104,10 @@
       margin-bottom: rem(16);
     }
 
+    h3 {
+      font-weight: 700;
+    }
+
     blockquote {
       background: #F5F5F5;
       border-radius: 20px;
@@ -128,6 +132,24 @@
 
     img {
       max-width: 100%;
+    }
+
+    ul {
+      li {
+        list-style: disc;
+      }
+    }
+
+    ol {
+      li {
+        list-style: decimal;
+      }
+    }
+
+    li {
+      font-size: 20px;
+      line-height: 32px;
+      color: #3B3C4A;
     }
   }
 
@@ -171,6 +193,8 @@
   &__box-image {
     width: 100%;
     height: rem(235);
+    border-radius: 15px;
+    overflow: hidden;
   }
 
   &__box-img {

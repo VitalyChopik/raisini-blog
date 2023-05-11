@@ -7,6 +7,7 @@
     <a href="<?php echo get_category_link($category[0]->cat_ID);?>" class="box__category category__box-category"><?php  echo $category[0]->cat_name; ?></a>
     <h3 class="box__title category__box-title"><a href="<?php the_permalink( );?>" class="box__link category__box-link"><?php the_title();?>
       </a></h3>
-    <div class="box__info category__box-info"><span class="box__data category__box-data"><?php the_time('F d'); ?></span><span class="box__read category__box-read"><?php the_field('mins_read');?> mins read</span></div>
+    <div class="box__info category__box-info"><span class="box__data category__box-data"><?php the_time('F d'); ?></span><span class="box__read category__box-read"><?php echo reading_time(); ?> mins read</span></div>
   </div>
+  <a href="<?php the_permalink();?>" class="box__permalink"></a>
 </article>

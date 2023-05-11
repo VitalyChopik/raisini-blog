@@ -31,15 +31,18 @@
     display: flex;
     background: linear-gradient(152.89deg, #FFFFFF 5.08%, #FFFFFF 81.13%);
     border-radius: 15px;
+    height: rem(610);
+    overflow: hidden;
 
     @include media(992) {
       flex-direction: column;
       overflow: hidden;
+      height: auto;
     }
   }
 
   &__img {
-    max-width: 55%;
+    max-width: 60%;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -47,7 +50,7 @@
 
     @include media(992) {
       max-width: 100%;
-      height: rem(335);
+      height: rem(235);
     }
   }
 

@@ -54,3 +54,14 @@ function cptui_register_my_taxes() {
 	register_taxonomy( "featured", [ "post" ], $args );
 }
 add_action( 'init', 'cptui_register_my_taxes' );
+
+
+//estimated reading time
+function reading_time() {
+	$content = get_post_field( 'post_content', $post->ID );
+	$word_count = str_word_count( strip_tags( $content ) );
+	$readingtime = ceil($word_count / 200);
+	$totalreadingtime = $readingtime . $timer;
+	
+	return $totalreadingtime;
+}

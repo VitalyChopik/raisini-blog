@@ -18,6 +18,8 @@
     border-radius: 10px;
     opacity: 0;
     transition: transform 0.5s;
+    height: 100%;
+    overflow: hidden;
 
     &:hover {
       transform: scale(0.9);
@@ -45,12 +47,11 @@
 
   &__box-img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
 
-    @include media(992) {
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
-    }
+    @include media(992) {}
   }
 
   &__box-content {
@@ -78,6 +79,13 @@
 
   &__block {
     display: inline-flex;
+    height: 100%;
+    align-items: center;
+    max-height: rem(400);
+
+    @include media(992) {
+      max-height: rem(500);
+    }
   }
 
   &__wrapper {

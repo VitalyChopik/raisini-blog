@@ -102,11 +102,30 @@
     background: #F1F8FF;
     border-radius: 10px;
     overflow: hidden;
+    position: relative;
+
+    &:hover {
+      .box__img {
+        transform: scale(1.03);
+      }
+    }
+  }
+
+  &__permalink {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 
   &__image {}
 
-  &__img {}
+  &__img {
+    transition: all 0.5s;
+  }
 
   &__text {}
 

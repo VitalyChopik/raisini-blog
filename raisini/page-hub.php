@@ -47,7 +47,7 @@ get_header();
   <!-- 2 -->
   <div class="featured">
     <div class="featured__container">
-      <h2 class="section__title featured__title">fearured</h2>
+      <h2 class="section__title featured__title">featured</h2>
       <p class="featured__subtitle">Innovative Insights For A Connected World</p>
 
     </div>

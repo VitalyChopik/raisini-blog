@@ -21,7 +21,13 @@ if (!function_exists('add_action')) {
 <html <?php language_attributes(); ?>>
 
 <?php get_template_part('rs/parts/header/head'); ?>
-
+<?php
+if(is_page('hub')){
+  ?>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7295458945517767" crossorigin="anonymous"></script>
+  <?php
+}
+?>
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
 

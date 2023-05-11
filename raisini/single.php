@@ -32,25 +32,13 @@ get_header();
     <?php  $category = get_the_category(); ?>
       <a href="<?php echo get_category_link($category[0]->cat_ID);?>" class="single__category"><?php  echo $category[0]->cat_name; ?></a>
       <div class="single__share">
-        <!-- <a href="#" class="single__share-link" rel="nofollow" rel="nofollow">
-          <img src="<?php echo get_template_directory_uri()?>/blog/iimages/share/twitter.png" alt="" class="single__share-link">
-        </a>
-        <a href="#" class="single__share-link" rel="nofollow" rel="nofollow">
-          <img src="<?php echo get_template_directory_uri()?>/blog/iimages/share/facebook.png" alt="" class="single__share-link">
-        </a>
-        <a href="#" class="single__share-link" rel="nofollow" rel="nofollow">
-          <img src="<?php echo get_template_directory_uri()?>/blog/iimages/share/linkedin.png" alt="" class="single__share-link">
-        </a>
-        <a href="#" class="single__share-link" rel="nofollow" rel="nofollow">
-          <img src="<?php echo get_template_directory_uri()?>/blog/iimages/share/share.png" alt=""  class="single__share-link">
-        </a> -->
         <?php echo do_shortcode('[shared_counts]')?>
       </div>
     </div>
     <h1 class="single__title"><?php the_title();?></h1>
     <div class="box__info single__info">
       <span class="box__data single__data"><?php the_time('F d'); ?></span>
-      <span class="box__read single__read"><?php the_field('mins_read');?> mins read</span></div>
+      <span class="box__read single__read"><?php echo reading_time(); ?> mins read</span></div>
     <?php the_post_thumbnail( 'full', ['class' => "single__image"] ); ?>
     <section class="single__content">
       <?php the_content();?>
