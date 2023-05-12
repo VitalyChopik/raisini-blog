@@ -42,6 +42,9 @@ if (!function_exists('add_action')) {
                   <a class="text-reset text-decoration-none py-1" href="<?php echo get_permalink(get_page_by_title('About')); ?>">
                     <?php esc_html_e('About', 'raisini'); ?>
                   </a>
+                  <a class="text-reset text-decoration-none py-1" href="<?php echo get_permalink(get_page_by_title('Hub')); ?>">
+                    <?php esc_html_e('Hub', 'raisini'); ?>
+                  </a>
                 </nav>
               </div>
             </div>
@@ -145,6 +148,10 @@ if (!function_exists('add_action')) {
                 <a href="https://twitter.com/raisiniofficial" class="px-3">
                   <?php image('twitter.svg'); ?>
                 </a>
+                <a href="https://raisini.medium.com/" class="px-3 medium__icon">
+                  <?php image('medium.png'); ?>
+                </a>
+                
               </div>
               <div class="d-flex align-items-center justify-content-between py-3">
                 <a href="https://www.tiktok.com/@raisinirecords" class="px-3">
@@ -155,6 +162,9 @@ if (!function_exists('add_action')) {
                 </a>
                 <a href="https://www.youtube.com/c/raisinirecords" class="px-3">
                   <?php image('youtube.svg'); ?>
+                </a>
+                <a href="https://raisini.substack.com/" class="px-3 substack__icon">
+                  <?php image('substack.png'); ?>
                 </a>
               </div>
             </nav>

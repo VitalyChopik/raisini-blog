@@ -41,12 +41,16 @@
       width: 100%;
       margin: 0;
       padding: 0;
+      height: 100%;
+      flex-direction: row;
+      justify-content: flex-start;
 
       @include media(992) {
         padding: rem(24);
         gap: rem(12);
         margin: 0;
         flex-wrap: nowrap;
+        height: auto;
       }
     }
   }
@@ -61,13 +65,13 @@
     .row & {
       max-width: rem(175);
       height: rem(175);
-      border-radius: rem(10);
       overflow: hidden;
       padding: 0;
 
       @include media(992) {
         max-width: rem(116);
         height: rem(116);
+        border-radius: 10px;
       }
     }
 
@@ -87,6 +91,7 @@
       @include media(992) {
         padding: 0;
         max-width: 65%;
+        justify-content: space-between;
       }
     }
   }
@@ -98,7 +103,7 @@
   &__box-title {
     .row & {
       @include media(992) {
-        margin-bottom: rem(24);
+        margin-bottom: rem(10);
       }
     }
   }

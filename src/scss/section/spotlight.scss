@@ -3,7 +3,7 @@
   padding: rem(104) 0;
 
   @include media(992) {
-    padding: rem(60) 0;
+    padding: rem(60) 0 rem(92);
   }
 
   &__bg {
@@ -17,6 +17,10 @@
     right: 0;
     left: 0;
     bottom: 0;
+
+    @include media(992) {
+      object-position: 85% center;
+    }
   }
 
   &__title {
@@ -31,7 +35,7 @@
     display: flex;
     background: linear-gradient(152.89deg, #FFFFFF 5.08%, #FFFFFF 81.13%);
     border-radius: 15px;
-    height: rem(610);
+    height: 535px;
     overflow: hidden;
 
     @include media(992) {
@@ -42,15 +46,17 @@
   }
 
   &__img {
-    max-width: 60%;
-    width: 100%;
-    height: 100%;
+    max-width: 660px;
+    width: 60%;
+    height: fit-content;
     object-fit: cover;
     object-position: center center;
 
     @include media(992) {
+      width: 100%;
       max-width: 100%;
       height: rem(235);
+      object-position: center top;
     }
   }
 
@@ -103,7 +109,15 @@
     }
   }
 
-  &__box-service {}
+  &__box-service {
+    &:nth-of-type(2) .spotlight__box-service-img {
+      max-height: 19px;
+    }
+  }
 
-  &__box-service-img {}
+  &__box-service-img {
+    max-height: 27px;
+
+
+  }
 }

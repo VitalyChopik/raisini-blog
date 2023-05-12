@@ -24,6 +24,8 @@
       align-items: center;
       padding: rem(24);
       gap: rem(24);
+      flex-direction: row;
+      height: auto;
     }
 
     &.first {
@@ -32,6 +34,7 @@
         flex-direction: column;
         padding: 0;
         gap: 0;
+        height: 100%;
       }
     }
 
@@ -119,8 +122,14 @@
   &__box-category {}
 
   &__box-title {
+    .first & {
+      margin-bottom: rem(32);
+    }
+
+    margin-bottom: rem(24);
+
     @include media(992) {
-      margin-bottom: rem(24);
+      margin-bottom: 10px;
     }
   }
 

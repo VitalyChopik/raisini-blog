@@ -54,6 +54,19 @@
     @include media(992) {
       height: rem(500);
     }
+
+    &::after {
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      width: 100%;
+      display: flex;
+      height: 75%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.773) 12.83%, rgba(0, 0, 0, 0.725) 24%, rgba(0, 0, 0, 0.667) 33.77%, rgba(0, 0, 0, 0.592) 42.37%, rgba(0, 0, 0, 0.51) 50.07%, rgba(0, 0, 0, 0.42) 57.13%, rgba(0, 0, 0, 0.333) 63.78%, rgba(0, 0, 0, 0.247) 70.3%, rgba(0, 0, 0, 0.165) 76.92%, rgba(0, 0, 0, 0.098) 83.91%, rgba(0, 0, 0, 0.04) 91.52%, rgba(0, 0, 0, 0) 100%);
+    }
   }
 
   &__box-img {
@@ -71,6 +84,7 @@
     width: 100%;
     padding: rem(24);
     max-width: rem(750);
+    z-index: 1;
   }
 
   &__box-title {
@@ -116,6 +130,13 @@
     justify-content: space-between;
     align-items: center;
     padding-top: rem(30);
+
+    max-width: 100%;
+    margin: 0 auto;
+
+    @include media(1440) {
+      max-width: 870px;
+    }
 
     @include media(992) {
       flex-direction: column;

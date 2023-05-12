@@ -141,7 +141,7 @@ function raisini_scripts()
 
   wp_enqueue_script('raisini', get_js_uri('raisini/raisini.js'), array(), _S_VERSION, true);
   wp_enqueue_script('bootstrap', get_js_uri('bootstrap/bootstrap.bundle.min.js'), array(), _S_VERSION, true);
-
+  wp_enqueue_style('custom-code', get_css_uri('custom-code.css'), array(), _S_VERSION);
   // wp_enqueue_style( 'raisini-style', get_stylesheet_uri(), array(), _S_VERSION );
   // wp_style_add_data( 'raisini-style', 'rtl', 'replace' );
   // wp_enqueue_script( 'raisini-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );

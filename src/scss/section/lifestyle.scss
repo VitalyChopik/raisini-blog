@@ -23,6 +23,7 @@
       width: 100%;
       display: flex;
       max-height: rem(535);
+      flex-direction: row;
 
       @include media(992) {
         flex-direction: column;
