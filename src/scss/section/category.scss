@@ -14,6 +14,7 @@ body.category {
   &__box {
     width: calc(50% - 12px);
     display: flex;
+    flex-direction: row;
 
     @include media(992) {
       width: 100%;
@@ -24,7 +25,6 @@ body.category {
     min-width: rem(205);
     max-width: rem(205);
     height: rem(205);
-    border-radius: 15px;
     overflow: hidden;
 
     @include media(992) {

@@ -246,7 +246,7 @@ get_header();
           $query = new WP_Query( [
             'post_type'     => 'post',
             'cat' => $category_id_music,
-            'posts_per_page' => 6,
+            'posts_per_page' => 7,
           ] );
           if ( $query->have_posts() ) {
             $cnt=0;

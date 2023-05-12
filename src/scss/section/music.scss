@@ -28,6 +28,7 @@
   &__box {
     &.col {
       width: calc(33.3333% - 16px);
+      min-width: calc(33.3333% - 16px);
 
       @include media(992) {
         width: 100%;
@@ -38,14 +39,16 @@
     &.row {
       display: flex;
       align-items: center;
-      width: 100%;
+      width: calc(50% - 16px);
       margin: 0;
       padding: 0;
       height: 100%;
       flex-direction: row;
       justify-content: flex-start;
+      flex-wrap: nowrap;
 
       @include media(992) {
+        width: 100%;
         padding: rem(24);
         gap: rem(12);
         margin: 0;
@@ -86,7 +89,7 @@
 
   &__box-text {
     .row & {
-      max-width: rem(500);
+      max-width: 70%;
 
       @include media(992) {
         padding: 0;

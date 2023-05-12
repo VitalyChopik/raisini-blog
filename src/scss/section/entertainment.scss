@@ -26,6 +26,7 @@
       gap: rem(24);
       flex-direction: row;
       height: auto;
+      width: 100%;
     }
 
     &.first {
@@ -112,10 +113,12 @@
 
     @include media(992) {
       padding: 0;
+      width: 100%;
     }
 
     .first & {
       padding: rem(24);
+      height: auto;
     }
   }
 

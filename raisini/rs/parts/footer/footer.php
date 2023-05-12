@@ -149,7 +149,7 @@ if (!function_exists('add_action')) {
                   <?php image('twitter.svg'); ?>
                 </a>
                 <a href="https://raisini.medium.com/" class="px-3 medium__icon">
-                  <?php image('medium.png'); ?>
+                  <?php image('medium.svg'); ?>
                 </a>
                 
               </div>
@@ -164,7 +164,7 @@ if (!function_exists('add_action')) {
                   <?php image('youtube.svg'); ?>
                 </a>
                 <a href="https://raisini.substack.com/" class="px-3 substack__icon">
-                  <?php image('substack.png'); ?>
+                  <?php image('substack.svg'); ?>
                 </a>
               </div>
             </nav>
@@ -179,7 +179,7 @@ if (!function_exists('add_action')) {
         <div class="row g-4">
           <div class="col-md-6 d-flex align-items-center justify-content-center justify-content-md-start order-md-1 order-3">
             <div class="text-dark text-opacity-50">
-              Copyright © 1999 - 2022 Raisini All Rights Reserved.
+              Copyright © 1999 - 2023 Raisini All Rights Reserved.
             </div>
           </div>
           <div class="col-md-6 d-flex align-items-center justify-content-md-end justify-content-center order-2">

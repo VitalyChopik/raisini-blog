@@ -128,3 +128,22 @@ if (bisinessSliderClass) {
     }
   });
 }
+
+
+
+
+function adaptiveBisinessNavigation() {
+  const bisinessBoxSlide = document.querySelectorAll('.bisiness__box.swiper-slide-active');
+  const bisinessNavigation = document.querySelector('.bisiness__navigation');
+  if (document.documentElement.clientWidth > 992) {
+    bisinessNavigation.style.width = `${bisinessBoxSlide[0].offsetWidth}px`;
+  } else {
+    bisinessNavigation.style.width = "";
+  }
+}
+
+adaptiveBisinessNavigation();
+
+window.addEventListener('resize', () => {
+  adaptiveBisinessNavigation();
+}, true);
